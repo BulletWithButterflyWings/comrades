@@ -1,5 +1,6 @@
 choice = 0 # Ger "choice" värdet 0.
 
+
 #import datetime
 #print (datetime.date())
 
@@ -21,12 +22,16 @@ while choice != 4: # Loopar allt understående till man trycker avsluta (3).
         for line in f: # Den säger åt att printa varje linje i textloggen.
                 print(line) # Skriver ut raden från log.txt.
         f.close()          # Stänger log.txt. 
-   
+    
+        
+
     elif choice == 2: # Ifall du väljer alternativ 2 så sker understående. 
         f = open('log.txt' , 'a+') # Du öppnar log.txt, med a+(append) som gör att det skrivs ut på nya rader varje gång.
         f.write(input("Skriv: ")) # Du kan skriva i dokumentet (log.txt).
         f.close() # Stänger textfil (log.txt).
-    
+
+        
+
     elif choice == 3:
         f = open('log.txt' , 'w+') # Rensar upp loggen.
         f.write("") 
