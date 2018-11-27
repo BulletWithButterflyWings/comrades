@@ -5,7 +5,7 @@ choice = 0 # Ger "choice" värdet 0.
 
 while choice != 4: # Loopar allt understående till man trycker avsluta (3).
 
-    print("***Välkommen till loggboken***\n") # Skriver ut menyn i terminalen.
+    print("\n***Välkommen till loggboken***\n") # Skriver ut menyn i terminalen.
     print("1. Läs loggar ") 
     print("2. Skriv en logg") 
     print("3. Rensa logg")
@@ -28,7 +28,7 @@ while choice != 4: # Loopar allt understående till man trycker avsluta (3).
         f.close() # Stänger textfil (log.txt).
     
     elif choice == 3:
-        f = open('log.txt' , 'w+')
-        f.write("")
+        f = open('log.txt' , 'w+') # Rensar upp loggen.
+        f.write("") 
     else: # Om inte 1 eller 2 skrivs in så stängs programet.
         print("\nStänger av programet...") 
