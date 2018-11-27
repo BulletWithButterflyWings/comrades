@@ -1,18 +1,22 @@
 choice = 0 
 message = ""
-meny = 0
 
 #import datetime
 #print (datetime.date())
 
-while meny != 3:
+while choice != 3:
 
-    print("***Välkommen till loggboken***.\n")
+    print("***Välkommen till loggboken***\n")
     print("1. Läs loggar ")
     print("2. Skriv en logg")
     print("3. Avsluta")
 
     try: 
-        meny = int(input("Gör ett val: "))
+        choice = int(input("\nGör ett val: "))
     except:
         print("Du gjorde inte ett korrekt val.")
+
+    if choice == 1: 
+        f = open('log.txt' , 'r')
+        for line in f:
+                print(line)            
