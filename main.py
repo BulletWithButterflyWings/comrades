@@ -19,4 +19,11 @@ while choice != 3:
     if choice == 1: 
         f = open('log.txt' , 'r')
         for line in f:
-                print(line)            
+                print(line)
+        f.close()          
+    elif choice == 2:
+        f = open('log.txt' , 'a+')
+        f.write(input("Skriv: ")) 
+        f.close()
+    else:
+        print("\nStänger av programet...")
